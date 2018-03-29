@@ -161,12 +161,16 @@ public class RdumUI {
         }, AWTEvent.KEY_EVENT_MASK);
 	}
 	
+	public RdumCtr getRdumCtr(){
+		return ctr;
+	}
+	
 	private JMenuBar createMenuBar() {
 		JMenuBar bar = new JMenuBar();
 		
 		JMenu file = new JMenu("File");
 
-		JMenuItem imp = new JMenuItem("Import");
+		JMenuItem imp = new JMenuItem("导入变更项目");
 		imp.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -199,7 +203,7 @@ public class RdumUI {
 		});
 		file.add(imp);
 		
-		JMenuItem exp = new JMenuItem("Export");
+		JMenuItem exp = new JMenuItem("导出全部数据");
 		exp.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {

@@ -75,7 +75,7 @@ public class RdumUser {
 			return;
 		if(src.indexOf("{") == 0 && 
 				src.lastIndexOf("}") == src.length()-1){
-			Class<?> c = this.getClass();
+			Class c = this.getClass();
 			src = src.substring(2, src.length()-2);
 			String[] items = src.split("\",\"");
 			for(String s : items){

@@ -20,7 +20,7 @@ public class RdumDb {
 	// user directory
 	private static String user = File.separator + "user";
 	
-//	private static String back = File.separator + "back";
+	private static String back = File.separator + "back";
 	
 	private static String recycle = File.separator + "recycle";
 

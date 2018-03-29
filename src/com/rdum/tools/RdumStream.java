@@ -104,7 +104,7 @@ public class RdumStream {
 	}
 
 	public static void inDum(File f) throws Exception {
-		SimpleDateFormat fs =new SimpleDateFormat("yyyy-MM-dd");
+//		SimpleDateFormat fs =new SimpleDateFormat("yyyy-MM-dd");
 		InputStream is = new FileInputStream(f);  
 		HSSFWorkbook wb = new HSSFWorkbook(is);
 		HSSFSheet st = wb.getSheet("Sheet1"); 
@@ -114,7 +114,7 @@ public class RdumStream {
 		String tname= null, tvalue = null;
 		while(iter.hasNext()){
 			HSSFRow row = iter.next();
-			String name = row.getCell(0).getStringCellValue().replace("(rd)", "");
+			String name = row.getCell(1).getStringCellValue().replace("(rd)", "");
 			String value = row.getCell(2).getStringCellValue();
 			if(name.equals(tname)){
 				tvalue += ","+value;
